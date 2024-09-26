@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">labRPS</string>
+    <string name="paper">Газетка</string>
+    <string name="rock">Каменюшка</string>
+    <string name="scissor">Ножницульки</string>
+    <string name="again">Заново</string>
+    <string name="playerVariant">Ты выбрал:</string>
+    <string name="computerVariant">Комп выбрал:</string>
+</resources>
