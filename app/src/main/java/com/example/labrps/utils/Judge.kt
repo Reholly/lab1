@@ -10,11 +10,10 @@ public object Judge {
         val first = values.first()
         val last = values.last()
 
-        return if (choices.first == last && choices.second == first) {
-            Result.PlayerWin
-        } else if (choices.first == first && choices.second == last){
+        return if (choices.first == first && choices.second == last){
             Result.ComputerWin
-        } else if (choices.first < choices.second){
+        } else if (choices.first < choices.second ||
+            (choices.first == last && choices.second == first)) {
             Result.PlayerWin
         } else if (choices.first == choices.second) {
             Result.Draw
