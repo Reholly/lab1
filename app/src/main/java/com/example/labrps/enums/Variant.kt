@@ -1,9 +1,5 @@
 package com.example.labrps.enums
 
-import com.example.labrps.enums.Result.ComputerWin
-import com.example.labrps.enums.Result.Draw
-import com.example.labrps.enums.Result.PlayerWin
-
 enum class Variant(value: Int) {
     Paper(0),
     Rock(1),

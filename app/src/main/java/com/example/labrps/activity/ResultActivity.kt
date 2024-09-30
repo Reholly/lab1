@@ -9,13 +9,14 @@ import com.example.labrps.enums.Variant
 import com.example.labrps.utils.Judge
 
 class ResultActivity : AppCompatActivity() {
-
     companion object {
         const val PLAYER_VARIANT = "PlayerVariant"
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+
         findViewById<Button>(R.id.btn_again).setOnClickListener {
             this.finish()
         }
@@ -26,8 +27,11 @@ class ResultActivity : AppCompatActivity() {
 
         val computerVariant = Variant.entries.random()
 
-        findViewById<TextView>(R.id.playerVariant).text = playerVariant.getName(playerVariant.ordinal)
-        findViewById<TextView>(R.id.computerVariant).text = computerVariant.getName(computerVariant.ordinal)
+        findViewById<TextView>(R.id.playerVariant).text =
+            playerVariant.getName(playerVariant.ordinal)
+
+        findViewById<TextView>(R.id.computerVariant).text =
+            computerVariant.getName(computerVariant.ordinal)
 
         val result = Judge.judge(Pair(playerVariant, computerVariant))
         findViewById<TextView>(R.id.result).text = result.getName(result.ordinal)
